@@ -1,0 +1,141 @@
+body {
+	background-color: #444;
+}
+.disp1{
+	height: 50px;
+}
+.disp2 {
+	height: 100px;
+}
+
+button {
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 30px;
+	color: white;
+}
+.parent {
+	background: url("../images/beholder.png") center no-repeat;
+	height: 80vh;
+	border: dotted red;
+	display: grid;
+	grid-template-areas:
+	"disp1 disp1 disp1 disp1"
+	"disp2 disp2 disp2 disp2"
+	"seven eight nine mod"
+	"four five six avg"
+	"one two three slash"
+	"point zero nil mul"
+	"d10 d12 d20 min"
+	"d4 d6 d8 plus"
+	"clear clear equal equal";
+}
+
+.disp1 {
+	grid-area: disp1;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.disp2 {
+	grid-area: disp2;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.seven {
+	grid-area: seven;
+}
+
+ .eight {
+	grid-area: eight;
+}
+
+.nine {
+	grid-area: nine;
+}
+
+.mod {
+	grid-area: mod;
+}
+
+.four {
+	grid-area: four;
+}
+
+.five {
+	grid-area: five;
+}
+
+.six {
+	grid-area: six;
+}
+
+.avg {
+	grid-area: avg;
+}
+
+.one {
+	grid-area: one;
+}
+
+.two {
+	grid-area: two;
+}
+
+.three {
+	grid-area: three;
+}
+
+.slash {
+	grid-area: slash;
+}
+
+.point {
+	grid-area: point;
+}
+
+.zero {
+	grid-area: zero;
+}
+
+.mul {
+	grid-area: mul;
+}
+
+.d10 {
+	grid-area: d10;
+}
+
+.d12 {
+	grid-area: d12;
+}
+
+.d20 {
+	grid-area: d20;
+}
+
+.nil {
+	grid-area: nil;
+}
+
+.d4 {
+	grid-area: d4;
+}
+
+.d6 {
+	grid-area: d6;
+}
+
+.d8 {
+	grid-area: d8;
+}
+
+.plus {
+	grid-area: plus;
+}
+
+.clear {
+	grid-area: clear;
+}
+
+.equal {
+	grid-area: equal;
+}
