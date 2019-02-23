@@ -1,0 +1,35 @@
+body {
+	font-size: 20px;
+}
+div	{
+	height: 100px;
+}
+.parent {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+	'display1 display1 display1 display1'
+	'display2 display2 display2 display2'
+	'display2 display2 display2 display2'
+	'seven eight nine mod'
+	'four five six avg'
+	'one two three slash'
+	'point zero . min'
+	'd10 d12 d20 plus'
+	'd4 d8 d6 equal'
+	'clear clear . equal'
+}
+
+.child {
+	border: solid;
+}
+.display1 {
+	grid-area: display1;
+	background-color: yellow
+}
+
+.display2 {
+	grid-area: display2;
+	background-color: blue
+}
