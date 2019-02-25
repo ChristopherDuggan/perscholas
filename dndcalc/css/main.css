@@ -1,114 +1,150 @@
 body {
-	background-color: #444;
-}
-.disp1{
-	height: 50px;
-}
-.disp2 {
-	height: 100px;
+	background-color: #aaa;
+	font-size: 30px;
 }
 
-button {
-	background-color: rgba(0, 0, 0, 0);
-	font-size: 30px;
-	color: white;
-}
-.parent {
-	background: url("../images/beholder.png") center no-repeat;
-	height: 80vh;
-	border: dotted red;
+.wrapper {
 	display: grid;
+	margin: 0 auto;
+	justify-content: center;
+	grid-template-columns: 1fr 2fr;
 	grid-template-areas:
-	"disp1 disp1 disp1 disp1"
+	"readme calc"
+	"foot foot";
+}
+
+.readme {
+		grid-area: readme;
+		max-width: 800px;
+}
+
+p {
+	font-size: 16px;
+}
+
+ul {
+	font-size: 16px;
+}
+
+.parent {
+	background: url("../images/bg.jpg") center no-repeat;
+	grid-area: calc;
+	width: 670px;
+	height: 770px;
+	display: grid;
+	grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+	grid-template-areas:
 	"disp2 disp2 disp2 disp2"
+	"disp1 disp1 disp1 disp1"
 	"seven eight nine mod"
 	"four five six avg"
 	"one two three slash"
 	"point zero nil mul"
 	"d10 d12 d20 min"
 	"d4 d6 d8 plus"
-	"clear clear equal equal";
+	"cl cl equals equals";
 }
 
-.disp1 {
+.footer{
+	grid-area: foot;
+}
+button {
+	background-color: rgba(0, 0, 0, .3);
+	font-size: 30px;
+	color: white;
+}
+
+div {
+	text-align: right;
+	padding: 15px;
+}
+
+#disp1 {
 	grid-area: disp1;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
 }
 
-.disp2 {
+#disp2 {
 	grid-area: disp2;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
+	background-image: url('../images/logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	overflow: hidden;
 }
 
-.seven {
+#seven {
 	grid-area: seven;
 }
 
- .eight {
+#eight {
 	grid-area: eight;
 }
 
-.nine {
+#nine {
 	grid-area: nine;
 }
 
-.mod {
+#mod {
 	grid-area: mod;
 }
 
-.four {
+#four {
 	grid-area: four;
 }
 
-.five {
+#five {
 	grid-area: five;
 }
 
-.six {
+#six {
 	grid-area: six;
 }
 
-.avg {
+#avg {
 	grid-area: avg;
 }
 
-.one {
+#one {
 	grid-area: one;
 }
 
-.two {
+#two {
 	grid-area: two;
 }
 
-.three {
+#three {
 	grid-area: three;
 }
 
-.slash {
+#slash {
 	grid-area: slash;
 }
 
-.point {
+#point {
 	grid-area: point;
 }
 
-.zero {
+#zero {
 	grid-area: zero;
 }
 
-.mul {
+#mul {
 	grid-area: mul;
 }
 
-.d10 {
+#d10 {
 	grid-area: d10;
 }
 
-.d12 {
+#d12 {
 	grid-area: d12;
 }
 
-.d20 {
+#d20 {
 	grid-area: d20;
 }
 
@@ -116,26 +152,26 @@ button {
 	grid-area: nil;
 }
 
-.d4 {
+#d4 {
 	grid-area: d4;
 }
 
-.d6 {
+#d6 {
 	grid-area: d6;
 }
 
-.d8 {
+#d8 {
 	grid-area: d8;
 }
 
-.plus {
+#plus {
 	grid-area: plus;
 }
 
-.clear {
-	grid-area: clear;
+#cl {
+	grid-area: cl;
 }
 
-.equal {
-	grid-area: equal;
+#equals {
+	grid-area: equals;
 }

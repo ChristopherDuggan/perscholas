@@ -1,43 +1,64 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="js/main.js"></script>
-	<title>Dungeons and Dragons Calculator</title>
-</head>
-<body>
-	<div class="parent">
-		<!-- primary display for user input -->
-		<div class="child disp1" id="disp1"></div>
-		<!-- secondary display for output/things in progress -->
-		<div class="child disp2" id="disp2"></div>
-		<button name="seven" class="seven">7</button>
-		<button name="eight" class="eight">8</button>
-		<button name="nine" class="nine">9</button>
-		<button name="mod" class="mod">Mod</button>
-		<button name="four" class="four">4</button>
-		<button name="five" class="five">5</button>
-		<button name="six" class="six">6</button>
-		<button name="avg" class="avg">Avg</button>
-		<button name="one" class="one">1</button>
-		<button name="two" class="two">2</button>
-		<button name="three" class="three">3</button>
-		<button name="slash" class="slash">/</button>
-		<button name="point" class="point">.</button>
-		<button name="zero" class="zero">0</button>
-		<div class="nil"></div>
-		<button name="mul" class="mul">*</button>
-		<button name="d10" class="d10">d10</button>
-		<button name="d12" class="d12">d12</button>
-		<button name="d20" class="d20">d20</button>
-		<button name="min" class="min">min</button>
-		<button name="d4" class="d4">d4</button>
-		<button name="d6" class="d6">d6</button>
-		<button name="d8" class="d8">d8</button>
-		<button name="plus" class="plus">+</button>
-		<button name="clear" class="clear">C</button>
-		<button name="equal" class="equal">=</button>
-
-	</div>
-</body>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="js/main.js"></script>
+		<title>Chris' Dungeons and Dragons Calculator</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="readme">
+				<h1>Chris' D&D Calculator</h1>
+				<p>
+					Hello! This is a calculator that should serve all of your basic arithmetic needs, plus all of your dice rolling needs, you nerd. Aside from the obvious functions, here are a few things to know before you get started:
+				</p>
+				<ul>
+					<li>The Mod button gives you the remainder after you divide by a whole number</li>
+					<li>The Avg button gives you the average of a group of numbers. To use it, hit the Avg 			button after each number you want to input, until the last number, then hit the Equals 			button.</li>
+					<li>To roll a single die, just hit the corresponding dbutton (ie. d20 for 1d20)</li>
+					<li>To roll multiple dice, input a number (or equation) then hit the corresponding 			dbutton.</li>
+					<li>When rolling multiple dice, the calculator will display your total as well as each 			individual roll.</li>
+				</ul>
+				<p>
+					Have fun roleplaying!
+				</p>
+			</div>
+			<div class="parent">
+				<!-- secondary display for output/things in progress -->
+				<div id="disp2"></div>
+				<!-- primary display for user input -->
+				<div id="disp1">0</div>
+				<button id="seven" value="7" onclick="appendOut('7')">7</button>
+				<button id="eight" value="8" onclick="appendOut('8')">8</button>
+				<button id="nine" value="9" onclick="appendOut('9')">9</button>
+				<button id="mod" value="%" onclick="appendOut('%')">Mod</button>
+				<button id="four" value="4" onclick="appendOut('4')">4</button>
+				<button id="five"value="5" onclick="appendOut('5')">5</button>
+				<button id="six" value="6" onclick="appendOut('6')">6</button>
+				<button id="avg" onclick="avg()">Avg</button>
+				<button id="one" value="1" onclick="appendOut('1')">1</button>
+				<button id="two" value="2" onclick="appendOut('2')">2</button>
+				<button id="three" value="3" onclick="appendOut('3')">3</button>
+				<button id="slash" value="/" onclick="appendOut('/')">/</button>
+				<button id="point" value="." onclick="appendOutPoint('.')">.</button>
+				<button id="zero" value="0" onclick="appendOut('0')">0</button>
+				<div class="nil"></div>
+				<button id="mul" value="*" onclick="appendOut('*')">*</button>
+				<button id="d10" onclick="d10()">d10</button>
+				<button id="d12" onclick="d12()">d12</button>
+				<button id="d20" onclick="d20()">d20</button>
+				<button id="min" value="-" onclick="appendOut('-')">-</button>
+				<button id="d4" onclick="d4()">d4</button>
+				<button id="d6" onclick="d6()">d6</button>
+				<button id="d8" onclick="d8()">d8</button>
+				<button id="plus" value="+" onclick="appendOut('+')">+</button>
+				<button id="cl" onclick="cl()">C</button>
+				<button id="equals" onclick="equals()">=</button>
+			</div>
+			<div class="footer">
+				<h5>Made by <a href="https://github.com/christopherduggan">Christopher Duggan</a></h5>
+			</div>
+		</div>
+	</body>
 </html>

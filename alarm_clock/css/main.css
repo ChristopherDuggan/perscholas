@@ -1,0 +1,80 @@
+/* ############# this was just basic styling as a placeholder, but ran out of time before I could spice it up ################### */
+
+body {
+  background: black;
+}
+
+.bigBox {
+  background: grey;
+  height: 90vh;
+  width: 80vw;
+  margin: 20px auto 0 auto;
+  padding: 15px;
+  display: grid;
+  grid-template-rows: 100px auto 50px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+  "head head"
+  "left right"
+  "foot foot";
+}
+
+header {
+  background: yellow;
+  grid-area: head;
+  text-align: center;
+}
+
+.left{
+  background: blue;
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#clock {
+  background: purple;
+  flex-basis: 1.2em;
+  text-align: center;
+  font-size: 48px;
+}
+
+#list {
+  background: orange;
+  flex: 1;
+  font-size: 30px;
+}
+
+.btns {
+  background: pink;
+  flex-basis: 50px;
+}
+
+.right {
+  background: green;
+  grid-area: right;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  text-align: center;
+}
+
+footer {
+  background: red;
+  grid-area: foot;
+  text-align: right;
+}
+
+#add {
+  width: 80vw;
+}
+
+#ifr {
+  display: none;
+  border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}

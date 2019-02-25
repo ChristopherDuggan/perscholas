@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Chris' Alarm Clock</title>
+  </head>
+  <!-- starts the clock -->
+  <body onload="timeDisp()">
+    <div class="bigBox">
+      <header>
+        <h1>Chris' Ugly Video Alarm</h1>
+      </header>
+      <div class="left">
+        <div id="clock">
+        </div>
+        <div id="list">
+          <!-- display area for alarm times -->
+          <!-- ################### Originally intended to allow for mulitple alarms, didn't have time for implementation################ -->
+        </div>
+        <!-- Allows user to input desired alarm time, goes off instantly if desired alarm time is earlier than current time, which needs fixing. Ideally, would accept future dates -->
+        <div class="btns">
+          hr<input type="number" id="hr" name="hr" value="1" min="1" max="12">
+          min<input type="number" id="min" name="min" value="00" min="00" max="59">
+          <button type="button" id="set" name="set" onclick="setAlarm()">Submit</button>
+        </div>
+      </div>
+      <div class="right">
+        <h1>It's a Brand New Day!!!</h1>
+        <!-- hidden video iframe -->
+          <iframe id="ifr" width="560" height="315" src="https://www.youtube.com/embed/KPjDfN9E74o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <footer>
+        <p>Created by <a href="https://github.com/ChristopherDuggan">Christopher Duggan</a>
+      </footer>
+    </div>
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
